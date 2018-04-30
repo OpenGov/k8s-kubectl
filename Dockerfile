@@ -1,17 +1,17 @@
 FROM alpine
 
-LABEL maintainer="Lachlan Evenson <lachlan.evenson@gmail.com>"
+LABEL maintainer="OpenGov, Inc."
 
 ARG VCS_REF
 ARG BUILD_DATE
 
 # Metadata
 LABEL org.label-schema.vcs-ref=$VCS_REF \
-      org.label-schema.vcs-url="https://github.com/lachie83/k8s-kubectl" \
+      org.label-schema.vcs-url="https://github.com/OpenGov/k8s-kubectl" \
       org.label-schema.build-date=$BUILD_DATE \
       org.label-schema.docker.dockerfile="/Dockerfile"
 
-ENV KUBE_LATEST_VERSION="v1.9.5"
+ENV KUBE_LATEST_VERSION="v1.9.7"
 
 RUN apk add --update ca-certificates \
  && apk add --update -t deps curl \
