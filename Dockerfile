@@ -23,7 +23,7 @@ LABEL org.label-schema.vcs-ref=$VCS_REF \
       com.opengov.build.service=kubectl
 
 
-ENV KUBE_LATEST_VERSION="v1.9.8"
+ENV KUBE_LATEST_VERSION="v1.9.11"
 
 RUN apk add --update ca-certificates bash jq \
  && apk add --update -t deps curl \
